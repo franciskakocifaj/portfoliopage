@@ -181,6 +181,25 @@ div,section,figure,blockquote,article,aside,ul,ol,li,table,a.card,.store,.pal sp
 /* square containers, override earlier rounded rule */
 .card,.flow div,.steps div,.cards div,.swot div,.tool,.dist>div,blockquote,.type,.persona,.xlink,.rr,.browser,.phone{border-radius:0!important}
 </style>
+<style id="gx-up-css">.gx-up{position:fixed;right:max(20px,env(safe-area-inset-right,0px) + 16px);bottom:max(20px,env(safe-area-inset-bottom,0px) + 16px);z-index:8;width:48px;height:48px;border-radius:50%!important;border:0;background:#f4f4f2;color:#0c0c0c;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.35);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s,background .2s,color .2s}
+.gx-up.on{opacity:1;transform:none;pointer-events:auto}
+.gx-up:hover{background:var(--acc);color:var(--acc-ink,#fff)}
+.gx-up:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.gx-up svg{width:20px;height:20px}
+@media (prefers-reduced-motion:reduce){.gx-up{transition:none}}
+</style>
+<style id="gx-i18n-css">.gx-lang{--i:1;position:relative;justify-self:center;display:grid;grid-template-columns:repeat(3,40px);border:1px solid var(--line);border-radius:99px!important;padding:3px;background:rgba(255,255,255,.03)}
+.gx-lang button{position:relative;z-index:1;appearance:none;border:0;background:none;color:var(--mut);font:600 11px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.06em;height:28px;cursor:pointer;transition:color .25s}
+.gx-lang button[aria-checked="true"]{color:#0c0c0c}
+.gx-lang button:hover:not([aria-checked="true"]){color:var(--fg)}
+.gx-lang button:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:99px}
+.gx-th{position:absolute;top:3px;left:3px;width:40px;height:28px;border-radius:99px!important;background:#f4f4f2;transform:translateX(calc(var(--i)*40px));transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+@media (prefers-reduced-motion:reduce){.gx-th{transition:none}}
+@media (max-width:600px){.gx-top{grid-template-columns:auto 1fr!important}.gx-top>span:first-child{display:none}.gx-lang{justify-self:start}}
+
+h1{line-height:1.02!important}h2{line-height:1!important}.gx-state{line-height:1.05!important}h3.sub,h3.sh,.gl,.pbody h3,.dist h3,.wb h3,.work .body h3{line-height:1.08!important}.big,.end p.q,.pq{line-height:1.12!important}
+h1.gx-word{line-height:.8!important}
+</style>
 </head><body data-gx="Motion design" data-gxmap='{"How the Tier 1 ABM program works": "ABM program", "From scattered materials to one brand": "The brand", "How a video gets made": "Process", "What the videos achieved": "Impact", "Find more of my work here": "More work"}'><div class="w">
 <nav><a href="index.html">&larr; Back to portfolio</a>
 <div><a href="#process">Process</a><a href="#tools">Tools</a><a href="#work">Work</a><a href="#impact">Impact</a></div></nav>
@@ -249,6 +268,53 @@ document.querySelectorAll("section").forEach(function(s){
   b.innerHTML="<span>"+(n<10?"0":"")+n+"</span><span>//"+lab.replace(/[<>&]/g,"")+"</span><span>"+right+"</span>";
   s.insertBefore(b,s.firstChild);
 });
+})();
+</script>
+<script id="gx-up">(function(){var b=document.createElement("button");b.type="button";b.className="gx-up";b.setAttribute("aria-label","Back to top");b.title="Back to top";
+b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+document.body.appendChild(b);
+function upd(){b.classList.toggle("on",window.scrollY>window.innerHeight*0.8);}
+window.addEventListener("scroll",upd,{passive:true});upd();
+b.addEventListener("click",function(){var still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;window.scrollTo({top:0,behavior:still?"auto":"smooth"});});
+function lab(){var l=document.documentElement.lang,t={de:"Nach oben",hr:"Na vrh"}[l]||"Back to top";b.setAttribute("aria-label",t);b.title=t;}
+new MutationObserver(lab).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});lab();
+})();
+</script>
+<script id="gx-i18n">window.__I18N={"de": {"Agentic Engineering Academy promo campaign": "Promo-Kampagne der Agentic Engineering Academy", "Book launch promo on LinkedIn: 1,724 video views, a 15.91% engagement rate and 10.52% CTR.": "Promo zum Buchlaunch auf LinkedIn: 1.724 Videoaufrufe, 15,91 % Engagement-Rate und 10,52 % CTR.", "Brainstorm and revisions": "Brainstorming und Überarbeitungen", "Choosing the right framework": "Das passende Framework wählen", "Clear, premium motion graphics that start with the goal and end with results.": "Klare, hochwertige Motion Graphics, die mit dem Ziel beginnen und mit Ergebnissen enden.", "Collaborative work where possible": "Zusammenarbeit, wo möglich", "Concept": "Konzept", "Defining the goals the video should achieve": "Festlegen, was das Video erreichen soll", "Delivery": "Auslieferung", "Find more of my work here": "Mehr von meiner Arbeit finden Sie hier", "Fitness brand animated mockup": "Animiertes Mockup für eine Fitnessmarke", "Getting buy-in": "Zustimmung gewinnen", "How a video gets made": "Wie ein Video entsteht", "Impact": "Wirkung", "Iterative: feedback and revisions loop back through the stages": "Iterativ: Feedback und Überarbeitungen laufen zurück durch die Phasen", "Motion design": "Motion-Design", "One motion piece across web, LinkedIn, TikTok and paid: 1,000+ organic views, 5.51% engagement and 3.42% CTR on LinkedIn.": "Ein Motion-Piece für Web, LinkedIn, TikTok und Paid: über 1.000 organische Aufrufe, 5,51 % Engagement und 3,42 % CTR auf LinkedIn.", "One of three videos that promoted the Academy and reached nearly 38K views combined. They attracted strong candidates in less than a month.": "Eines von drei Videos, die die Academy beworben und zusammen fast 38.000 Aufrufe erreicht haben. Sie brachten in weniger als einem Monat starke Bewerbungen.", "Planning around the platform": "Planung rund um die Plattform", "Process": "Prozess", "Production": "Produktion", "Promo video for a fitness app, used on its landing page and six social channels. On LinkedIn: 10.74% engagement and 6.2% CTR.": "Promo-Video für eine Fitness-App, eingesetzt auf der Landingpage und sechs Social-Kanälen. Auf LinkedIn: 10,74 % Engagement und 6,2 % CTR.", "Selected videos": "Ausgewählte Videos", "Software, AI, digital assets, plugins": "Software, KI, digitale Assets, Plugins", "Strategy": "Strategie", "The actual work": "Die eigentliche Arbeit", "The finished video delivered": "Das fertige Video ausgeliefert", "Tools": "Tools", "Wealth management platform showcase": "Showcase für eine Wealth-Management-Plattform", "What I work in": "Womit ich arbeite", "What the videos achieved": "Was die Videos erreicht haben", "Work": "Arbeiten", "engagement rate for a fitness app showcase": "Engagement-Rate für einen Fitness-App-Showcase", "view rate: 541 views from 661 impressions": "View-Rate: 541 Aufrufe bei 661 Impressionen", "views on TikTok for the Academy campaign": "Aufrufe auf TikTok für die Academy-Kampagne", "← Back to portfolio": "← Zurück zum Portfolio", "Been there book launch promo": "Promo zum Buchlaunch von Been there", "Portfolio": "Portfolio", "CX research": "CX-Research", "Case study": "Case Study", "ABM case study": "ABM Case Study", "ABM program": "ABM-Programm", "The brand": "Die Marke", "Marketing Manager at DECODE": "Marketing Managerin bei DECODE", "Back to top": "Nach oben", "More work": "Mehr Arbeiten"}, "hr": {"Agentic Engineering Academy promo campaign": "Promotivna kampanja za Agentic Engineering Academy", "Book launch promo on LinkedIn: 1,724 video views, a 15.91% engagement rate and 10.52% CTR.": "Promo za lansiranje knjige na LinkedInu: 1.724 pregleda videa, 15,91 % stope angažmana i 10,52 % CTR-a.", "Brainstorm and revisions": "Brainstorming i revizije", "Choosing the right framework": "Odabir pravog frameworka", "Clear, premium motion graphics that start with the goal and end with results.": "Jasna, premium animirana grafika koja počinje ciljem, a završava rezultatima.", "Collaborative work where possible": "Suradnja gdje god je moguće", "Concept": "Koncept", "Defining the goals the video should achieve": "Određivanje ciljeva koje video treba postići", "Delivery": "Isporuka", "Find more of my work here": "Više mojih radova pronađite ovdje", "Fitness brand animated mockup": "Animirani mockup za fitness brend", "Getting buy-in": "Dobivanje odobrenja", "How a video gets made": "Kako nastaje video", "Impact": "Učinak", "Iterative: feedback and revisions loop back through the stages": "Iterativno: povratne informacije i revizije vraćaju se kroz faze", "Motion design": "Motion dizajn", "One motion piece across web, LinkedIn, TikTok and paid: 1,000+ organic views, 5.51% engagement and 3.42% CTR on LinkedIn.": "Jedan video za web, LinkedIn, TikTok i plaćene kanale: 1.000+ organskih pregleda, 5,51 % angažmana i 3,42 % CTR-a na LinkedInu.", "One of three videos that promoted the Academy and reached nearly 38K views combined. They attracted strong candidates in less than a month.": "Jedan od tri videa koji su promovirali Akademiju i zajedno dosegli gotovo 38 tisuća pregleda. Privukli su jake kandidate za manje od mjesec dana.", "Planning around the platform": "Planiranje prema platformi", "Process": "Proces", "Production": "Produkcija", "Promo video for a fitness app, used on its landing page and six social channels. On LinkedIn: 10.74% engagement and 6.2% CTR.": "Promotivni video za fitness aplikaciju, korišten na landing stranici i šest društvenih kanala. Na LinkedInu: 10,74 % angažmana i 6,2 % CTR-a.", "Selected videos": "Odabrani videi", "Software, AI, digital assets, plugins": "Softver, umjetna inteligencija, digitalni materijali, dodaci", "Strategy": "Strategija", "The actual work": "Sam rad", "The finished video delivered": "Isporučen gotov video", "Tools": "Alati", "Wealth management platform showcase": "Prikaz platforme za upravljanje imovinom", "What I work in": "U čemu radim", "What the videos achieved": "Što su videi postigli", "Work": "Radovi", "engagement rate for a fitness app showcase": "stopa angažmana za prikaz fitness aplikacije", "view rate: 541 views from 661 impressions": "stopa pregleda: 541 pregled od 661 prikaza", "views on TikTok for the Academy campaign": "pregleda na TikToku za kampanju Akademije", "← Back to portfolio": "← Natrag na portfolio", "Been there book launch promo": "Promo lansiranja knjige Been there", "Portfolio": "Portfolio", "CX research": "CX istraživanje", "Case study": "Studija slučaja", "ABM case study": "ABM studija slučaja", "ABM program": "ABM program", "The brand": "Brend", "Marketing Manager at DECODE": "Marketing managerica u DECODE-u", "Back to top": "Na vrh", "More work": "Više radova"}, "hde": {"Ideas that <em>move<\/em>.": "Ideen, die <em>bewegen<\/em>."}, "hhr": {"Ideas that <em>move<\/em>.": "Ideje koje <em>pokreću<\/em>."}, "xde": {"Portfolio": "Portfolio", "CX research": "CX-Research", "Case study": "Case Study", "ABM case study": "ABM Case Study", "ABM program": "ABM-Programm", "The brand": "Die Marke", "Marketing Manager at DECODE": "Marketing Managerin bei DECODE", "Back to top": "Nach oben", "More work": "Mehr Arbeiten"}, "xhr": {"Portfolio": "Portfolio", "CX research": "CX istraživanje", "Case study": "Studija slučaja", "ABM case study": "ABM studija slučaja", "ABM program": "ABM program", "The brand": "Brend", "Marketing Manager at DECODE": "Marketing managerica u DECODE-u", "Back to top": "Na vrh", "More work": "Više radova"}};
+(function(){
+var T=window.__I18N||{de:{},hr:{},hde:{},hhr:{},xde:{},xhr:{}};
+var norm=function(s){return s.replace(/\s+/g," ").trim();};
+var nodes=[],htmlEls=[],bars=[];
+function collect(){
+  document.querySelectorAll("h1,p.q").forEach(function(el){var k=norm(el.innerHTML);if(T.hde[k]){el.__en=el.innerHTML;el.__k=k;htmlEls.push(el);}});
+  document.querySelectorAll(".gx-bar").forEach(function(b){var s=b.parentNode.querySelector("h2");var sp=b.querySelectorAll("span");bars.push({c:sp[1],r:sp[2],h:s?norm(s.textContent):"",en:sp[1].textContent,ren:sp[2].textContent});});
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;while(p&&p!==document.body){if(p.__k||(p.classList&&(p.classList.contains("gx-bar")||p.classList.contains("gx-top")))||/^(SCRIPT|STYLE|svg)$/i.test(p.nodeName))return NodeFilter.FILTER_REJECT;p=p.parentNode;}return /\S/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+  var n;while(n=w.nextNode()){var k=norm(n.nodeValue);if(T.de[k]||T.hr[k])nodes.push({n:n,k:k,en:n.nodeValue});}
+}
+function short(t){var s=t.indexOf(":")>0?t.split(":")[0]:t;var w=s.split(/\s+/);return w.length>4?w.slice(0,3).join(" "):s;}
+function apply(l){
+  var d=T[l]||{},hd=T["h"+l]||{},xd=T["x"+l]||{};
+  nodes.forEach(function(o){var v=l==="en"?null:d[o.k];if(!v){o.n.nodeValue=o.en;return;}var m=o.en.match(/^(\s*)[\s\S]*?(\s*)$/);o.n.nodeValue=m[1]+v+m[2];});
+  htmlEls.forEach(function(el){el.innerHTML=l==="en"?el.__en:(hd[el.__k]||el.__en);});
+  bars.forEach(function(b){if(l==="en"){b.c.textContent=b.en;b.r.textContent=b.ren;return;}
+    var lab=b.en.replace(/^\/\//,"");var m=xd[lab];var full=d[b.h];
+    b.c.textContent="//"+(m||(full?short(full):lab));b.r.textContent=xd[b.ren]||d[b.ren]||b.ren;});
+  document.querySelectorAll("a[href]").forEach(function(a){if(a.__h===undefined)a.__h=a.getAttribute("href");var h=a.__h;if(!/^[\w-]+\.html(#.*)?$|^https:\/\/claude\.ai\/artifact\//.test(h))return;var p=h.split("#");a.setAttribute("href",l==="en"?h:p[0]+(p[0].indexOf("?")<0?"?":"&")+"lang="+l+(p[1]?"#"+p[1]:""));});
+  try{if(history.replaceState){var u=new URL(location.href);if(l==="en")u.searchParams.delete("lang");else u.searchParams.set("lang",l);history.replaceState(null,"",u);}}catch(e){}
+  document.documentElement.lang=l;
+  document.querySelectorAll(".gx-lang button").forEach(function(btn,i){var on=btn.getAttribute("data-l")===l;btn.setAttribute("aria-checked",on?"true":"false");if(on)btn.parentNode.style.setProperty("--i",i);});
+  try{localStorage.setItem("gx-lang",l);}catch(e){}
+}
+var top=document.querySelector(".gx-top");if(!top)return;
+var home=top.querySelector(".gx-home");
+var sw=document.createElement("div");sw.className="gx-lang";sw.setAttribute("role","radiogroup");sw.setAttribute("aria-label","Language");
+sw.innerHTML='<i class="gx-th" aria-hidden="true"></i><button type="button" role="radio" data-l="de" lang="de" title="Deutsch">DE</button><button type="button" role="radio" data-l="en" lang="en" title="English">EN</button><button type="button" role="radio" data-l="hr" lang="hr" title="Hrvatski">HR</button>';
+if(home)top.replaceChild(sw,home);else top.insertBefore(sw,top.querySelector(".gx-c"));
+sw.addEventListener("click",function(e){var b=e.target.closest("button");if(b)apply(b.getAttribute("data-l"));});
+collect();
+var l="en";try{l=localStorage.getItem("gx-lang")||"en";}catch(e){}
+var q=(location.search.match(/[?&]lang=(de|en|hr)/)||[])[1];if(q)l=q;
+apply(l);
 })();
 </script>
 </body></html>
